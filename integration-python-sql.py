@@ -2,7 +2,9 @@ import pyodbc
 
 # print(pyodbc.drivers())
 
-connection_data = "Driver={SQLite3 ODBC Driver};Server=localhost;Database=salarios.sqlite"
+connection_data = (
+    "Driver={SQLite3 ODBC Driver};Server=localhost;Database=salarios.sqlite"
+)
 connection = pyodbc.connect(connection_data)
 print("Connection successful")
 

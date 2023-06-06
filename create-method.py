@@ -5,11 +5,13 @@ connection = pyodbc.connect(connection_data)
 print("Connection successful")
 
 cursor = connection.cursor()
-cursor.execute("""
+cursor.execute(
+    """
 INSERT INTO albums (Title, ArtistId)
 VALUES
 ('Lira Rock', 4)
-""")
+"""
+)
 cursor.commit()
 cursor.close()
 connection.close()
